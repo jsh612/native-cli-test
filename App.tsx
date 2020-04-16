@@ -1,9 +1,10 @@
 import React from 'react';
-import {Button} from 'react-native-paper';
 import styled from 'styled-components';
-import {View} from 'react-native';
+import {View, StatusBar} from 'react-native';
 
-declare const global: {HermesInternal: null | {}};
+import Home from './src/Home/index';
+import Settings from './src/Settings/index';
+import Header from './src/Header';
 
 const SView = styled(View)`
   height: 100%;
@@ -13,9 +14,14 @@ const SView = styled(View)`
 
 const App = () => {
   return (
-    <SView>
-      <Button icon="camera">안녕</Button>
-    </SView>
+    <View>
+      <StatusBar barStyle="dark-content" />
+      <Header />
+      <SView>
+        <Home />
+        <Settings />
+      </SView>
+    </View>
   );
 };
 
