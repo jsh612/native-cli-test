@@ -1,11 +1,21 @@
 import React from 'react';
-import {Button} from 'react-native-paper';
+import {Text, SafeAreaView, View} from 'react-native';
+import styled from 'styled-components';
+
+const SView = styled(View)`
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+`;
 
 const Settings = () => {
   return (
-    <Button icon="settings" color="white">
-      세팅
-    </Button>
+    <SafeAreaView>
+      <SView>
+        <Text>세팅</Text>
+      </SView>
+    </SafeAreaView>
   );
 };
 

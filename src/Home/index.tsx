@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {Button} from 'react-native-paper';
 import styled from 'styled-components';
-import {View, Text, Alert} from 'react-native';
+import {View, Text, Alert, StatusBar, SafeAreaView} from 'react-native';
 import axios from 'axios';
 
 const SView = styled(View)`
-  width: 300px;
-  height: 300px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   background-color: yellowgreen;
   border: solid 2px black;
 `;
@@ -38,12 +39,16 @@ const Home = () => {
   }, []);
 
   return (
-    <SView>
-      <Button icon="camera" color="red">
-        홈
-      </Button>
-      <JText>{joke}</JText>
-    </SView>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <SView>
+          <Button icon="car">Press me</Button>
+          <Text>Home</Text>
+          <JText>{joke}</JText>
+        </SView>
+      </SafeAreaView>
+    </>
   );
 };
 
