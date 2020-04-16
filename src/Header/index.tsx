@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Appbar} from 'react-native-paper';
+import Settings from '../Settings/index';
 
 export default class Header extends React.Component {
   _goBack = () => console.log('Went back');
@@ -15,6 +16,7 @@ export default class Header extends React.Component {
         <Appbar.Content title="Title" subtitle="Subtitle" />
         <Appbar.Action icon="magnify" onPress={this._handleSearch} />
         <Appbar.Action icon="dots-vertical" onPress={this._handleMore} />
+        <Settings />
       </Appbar.Header>
     );
   }

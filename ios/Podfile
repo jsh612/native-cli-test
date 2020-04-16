@@ -80,6 +80,11 @@ target 'clitestapp' do
   
 
 
+
+
+
+
+
   target 'clitestappTests' do
     inherit! :complete
     # Pods for testing
